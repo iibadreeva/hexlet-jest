@@ -1,4 +1,5 @@
-https://github.com/<OWNER>/<REPOSITORY>/actions/workflows/<WORKFLOW_FILE>/badge.svg
+![example workflow](https://github.com/iibadreeva/hexlet-jest/actions/workflows/hello-world.yml/badge.svg)
+
 
 ## Цель поекта
 - Тестирование
