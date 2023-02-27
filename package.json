@@ -1,0 +1,25 @@
+{
+  "name": "nodejs",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx jest",
+    "test-coverage": "npx jest --coverage"
+  },
+  "keywords": [],
+  "author": "Badreeva Inna",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.12.10",
+    "@babel/core": "^7.12.10",
+    "@babel/plugin-proposal-class-properties": "^7.12.1",
+    "@babel/plugin-syntax-class-properties": "^7.12.1",
+    "@babel/preset-env": "^7.12.11",
+    "jest": "^29.0.1"
+  },
+  "dependencies": {
+    "lodash": "^4.17.21"
+  }
+}
