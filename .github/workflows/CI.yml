@@ -1,0 +1,30 @@
+name: CI
+
+on:
+  - push
+  - pull_request
+
+env:
+  CI: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    strategy:
+      # Node versions list
+      matrix:
+        node-version: [16.x]
+
+    steps:
+      # Клонируем репозиторий
+      - uses: actions/checkout@v3
+        # Step's name
+      - name: Use Node.js ${{ matrix.node-version }}
+        # Устанавливаем Node.js
+        uses: actions/setup-node@v3
+        # The Node.js version to configure
+        with:
+          node-version: ${{ matrix.node-version }}
+      - run: npm install
+      - run: npm run test
