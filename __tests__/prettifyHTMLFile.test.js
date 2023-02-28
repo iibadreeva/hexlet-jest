@@ -12,15 +12,18 @@ const prettifyHTMLFile = getFunction();
 const getFixturePath = (name) => path.join(__dirname, '..', '__fixtures__', name);
 const tmpFilePath = path.join(os.tmpdir(), 'tmp.html'); // создаем временынй путь
 
+let after;
+beforeAll(async () => {
+  const afterPath = getFixturePath('after.html')
+  after = await fs.readFile(afterPath, 'utf-8')
+});
+
 beforeEach(async () => {
   await fs.copyFile(getFixturePath('before.html'), tmpFilePath); // копируем из нужного файла в копию
 })
 
 test('Read file', async () => {
   await prettifyHTMLFile(tmpFilePath); // проиводим модификацию
-
-  const afterPath = getFixturePath('after.html')
-  const after = await fs.readFile(afterPath, 'utf-8')
 
   const before = await fs.readFile(tmpFilePath, 'utf-8');
   expect(before).toEqual(after)
