@@ -11,7 +11,6 @@ const formats = ['csv', 'json', 'yml'];
 const getFixturePath = (name) => path.join(__dirname, '..', '__fixtures__', name);
 
 let expected;
-
 beforeAll(async () => {
   expected = await fs.readFile(getFixturePath('result.html'), 'utf-8');
 });
