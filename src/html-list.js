@@ -35,7 +35,7 @@ const genSolution = (parsers) => async (filepath) => {
   return `<ul>${lis.join('')}</ul>`;
 };
 
-const functions = {
+const htmlList = {
   right1: genSolution(parsers1),
   wrong1: genSolution(parsers2),
   wrong2: genSolution(parsers3),
@@ -44,5 +44,5 @@ const functions = {
 
 export default () => {
   const name = process.env.FUNCTION_VERSION || 'right1';
-  return functions[name];
+  return htmlList[name];
 };
