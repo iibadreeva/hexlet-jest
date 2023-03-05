@@ -21,10 +21,3 @@ test.each(formats)("%s", async (format) => {
   const actual = await toHtmlList(filePath);
   expect(actual).toEqual(expected.trim());
 });
-
-const dataFake = [
-  { language: "php" },
-  { language: "javascript" },
-  { language: "java" },
-  { language: "python" },
-];
