@@ -24,6 +24,8 @@
     "@jest/globals": "^29.4.3",
     "@octokit/rest": "^19.0.7",
     "fakerator": "^0.3.6",
+    "fast-check": "^3.7.0",
+    "jest-sorted": "^1.0.14",
     "js-yaml": "^4.1.0",
     "klaw-sync": "^6.0.0",
     "lodash": "^4.17.21",
